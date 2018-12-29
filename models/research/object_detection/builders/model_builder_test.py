@@ -4,6 +4,7 @@
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
 #
+#     http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,9 +16,6 @@
 """Tests for object_detection.models.model_builder."""
 
 import tensorflow as tf
-import sys
-sys.path.insert(0,'/home/zhouzhefu/tf/source/quiz-w8-code/models-master/research')
-sys.path.insert(1,'/home/zhouzhefu/tf/source/quiz-w8-code/models-master/research/slim')
 
 from google.protobuf import text_format
 from object_detection.builders import model_builder
@@ -32,8 +30,6 @@ from object_detection.models.ssd_inception_v2_feature_extractor import SSDIncept
 from object_detection.models.ssd_inception_v3_feature_extractor import SSDInceptionV3FeatureExtractor
 from object_detection.models.ssd_mobilenet_v1_feature_extractor import SSDMobileNetV1FeatureExtractor
 from object_detection.protos import model_pb2
-
-
 
 FEATURE_EXTRACTOR_MAPS = {
     'faster_rcnn_resnet50':
@@ -743,4 +739,3 @@ class ModelBuilderTest(tf.test.TestCase):
 
 if __name__ == '__main__':
   tf.test.main()
-#     http://www.apache.org/licenses/LICENSE-2.0
